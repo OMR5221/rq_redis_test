@@ -1,10 +1,12 @@
+### Need to run client on windows machine not linu subsytem to work: ###
+
 import requests
 import json
 import sys
 from time import sleep
 
 
-response = requests.get('http://localhost:5005/esbi/stg1/api_runner')
+response = requests.get('http://localhost:5005/esbi/stg1/api_runner?plant_id=34044&server_name=ewis-solarjb&tag_name=PCS1_SAMSUNG_BAT2205_A2_DC_Current&timestamp=2019-03-1007:54:00')
 print(response.text)
 #response_str = json.dumps(response.text)
 #print(response_str)

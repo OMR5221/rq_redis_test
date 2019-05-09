@@ -17,6 +17,18 @@ class API():
     @staticmethod
     @app.route('/esbi/stg1/api_runner', methods=['GET'])
     def api_runner():
+
+        plant_id = request.args.get('plant_id')
+        server_name = request.args['server_name']
+        tag_name = request.args['tag_name']
+        dts = request.args['timestamp']
+        print('''
+                <h1>PLANT ID: {}</h1>
+                <h1>SERVER NAME: {}</h1>
+                <h1>TAG NAME: {}</h1>
+                <h1>START TIMESTAMP: {}</h1>
+                <h1>END TIMESTAMP: {}</h1>
+            '''.format(plant_id, server_name, tag_name, dts, dts))
             results = {}
             # Want to set the following args:
         # start time
